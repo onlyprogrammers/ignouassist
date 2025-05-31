@@ -12,8 +12,8 @@ export default function HeroSlider() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setWidth(width)
-      setHeight(height)
+      setWidth(window.innerWidth)
+      setHeight(window.innerHeight)
     }
   }, [])
 
