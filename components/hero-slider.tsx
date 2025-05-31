@@ -7,6 +7,15 @@ import { ChevronLeft, ChevronRight, Play, Zap, Star, BookOpen, Trophy, Users } f
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [width, setWidth] = useState(0)
+  const [height, setHeight] = useState(0)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setWidth(width)
+      setHeight(height)
+    }
+  }, [])
 
   const slides = [
     {
@@ -63,7 +72,7 @@ export default function HeroSlider() {
   }
 
   return (
-    <div className="relative overflow-hidden bg-black " style={{height:window.innerHeight> 500 ? "min-content" : "80vh"}}>
+    <div className="relative overflow-hidden bg-black " style={{height:height> 500 ? "min-content" : "80vh"}}>
       {/* Animated Background */}
       <div className="absolute inset-0 ">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>
@@ -100,9 +109,9 @@ export default function HeroSlider() {
       </div>
 
       {/* Slider Content */}
-      <div className="relative  flex items-center " style={{scale: window.innerWidth < 768 ? "0.8" : ".9",transform:window.innerWidth<500?"translateY(-50px)":""}}>  
+      <div className="relative  flex items-center " style={{scale: width < 768 ? "0.8" : ".9",transform:width<500?"translateY(-50px)":""}}>  
         <div className="container mx-auto px-1 lg:py-4">
-          <div className="grid lg:grid-cols-2 gap-8 lg:space-y-12" style={{display:'flex', flexDirection:window.innerWidth<500?"column-reverse":"row",justifyContent:'center',alignItems:'center'}} >
+          <div className="grid lg:grid-cols-2 gap-8 lg:space-y-12" style={{display:'flex', flexDirection:width<500?"column-reverse":"row",justifyContent:'center',alignItems:'center'}} >
             {/* Left Content */}
             <div className="text-white space-y-4 z-10 lg:space-y-8">
               <div className="space-y-2">
@@ -113,7 +122,7 @@ export default function HeroSlider() {
                   {slides[currentSlide].subtitle}
                 </Badge>
 
-                <h1 className="text-5xl md:text-7xl sm:text- font-bold leading-tight" style={{fontSize: window.innerWidth < 508 ? "2rem" : "3rem"}}>
+                <h1 className="text-5xl md:text-7xl sm:text- font-bold leading-tight" style={{fontSize: width < 508 ? "2rem" : "3rem"}}>
                   <span className={`bg-gradient-to-r ${slides[currentSlide].gradient} bg-clip-text text-transparent`}>
                     {slides[currentSlide].title}
                   </span>
