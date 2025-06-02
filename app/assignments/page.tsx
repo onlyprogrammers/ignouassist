@@ -137,7 +137,7 @@ export default function AssignmentsPage() {
       {/* Assignments Grid */}
       <section className="py-8 px-4">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 ">
             {assignments.map((assignment) => (
               <Card key={assignment.id} className="hover:shadow-lg transition-shadow">
                 <CardHeader>

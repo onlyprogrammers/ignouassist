@@ -33,11 +33,11 @@ export default function HomePage() {
       <HeroSlider />
 
       {/* Services Grid */}
-      <section className="py-16 px-4 bg-white relative small-py">
+      <section className="py-12 px-4 bg-white relative small-py">
         <div className="container mx-auto">
-          <div className="text-center mb-14">
-            <Badge className="mb-4 bg-blue-100 text-blue-700">Our Services</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-7">
+            <Badge className="mb-2 bg-blue-100 text-blue-700">Our Services</Badge>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
               Everything You Need for
               <span className="text-blue-600"> IGNOU Success</span>
             </h2>

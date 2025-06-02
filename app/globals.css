@@ -294,7 +294,7 @@ html {
     gap: 1rem;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .small-text {
     font-size: 0.875rem; /* 14px */
   }
