@@ -134,7 +134,7 @@ export default function HeroSlider() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-3 gap-6 small-py">
                 {Object.entries(slides[currentSlide].stats).map(([key, value], index) => (
                   <div key={key} className="text-center">
                     <div
@@ -148,7 +148,7 @@ export default function HeroSlider() {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-row gap-1" style={{flexWrap: "nowrap"}}>
+              <div className="flex flex-row gap-1 small-py" style={{flexWrap: "nowrap"}}>
                 <Button
                   size="lg"
                   className={`bg-gradient-to-r ${slides[currentSlide].gradient} hover:opacity-90 text-white border-0 px-8 py-2 text-lg font-medium transform hover:scale-105 transition-all duration-300 shadow-2xl`}

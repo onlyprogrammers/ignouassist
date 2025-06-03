@@ -6,10 +6,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Search, Download, Star, Clock, CheckCircle, FileText } from "lucide-react"
 import { SlidingNavbar } from "@/components/sliding-navbar"
 
+
 export default function AssignmentsPage() {
   const assignments = [
     {
       id: 1,
+      
       code: "BEGC-101",
       title: "An Introduction to Literature",
       program: "BA",
@@ -88,7 +90,7 @@ export default function AssignmentsPage() {
       <SlidingNavbar />
 
       {/* Hero Section */}
-      <section className="py-16 px-4">
+      <section className="py-16 small-py px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">IGNOU Assignments</h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -99,7 +101,7 @@ export default function AssignmentsPage() {
       </section>
 
       {/* Search and Filter */}
-      <section className="py-8 px-4 bg-white">
+      <section className="py-8 px-4 bg-white small-py">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-4 mb-8">
             <div className="md:col-span-2">
@@ -125,7 +127,7 @@ export default function AssignmentsPage() {
           </div>
 
           {/* Filter Tabs */}
-          <div className="flex space-x-4 mb-8">
+          <div className="flex space-x-4 mb-8 overflow-scroll">
             <Button variant="default">All Assignments</Button>
             <Button variant="outline">Free Assignments</Button>
             <Button variant="outline">Premium Assignments</Button>
@@ -159,7 +161,7 @@ export default function AssignmentsPage() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-gray-600 mb-4">{assignment.description}</p>
+                  <p className="text-sm text-gray-600 mb-4 mb-hidden">{assignment.description}</p>
 
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-4 text-sm text-gray-500">
@@ -167,7 +169,7 @@ export default function AssignmentsPage() {
                         <Download className="h-4 w-4" />
                         <span>{assignment.downloads}</span>
                       </div>
-                      <div className="flex items-center space-x-1">
+                      <div className="flex items-center space-x-1 mb-hidden">
                         <Clock className="h-4 w-4" />
                         <span>24h delivery</span>
                       </div>

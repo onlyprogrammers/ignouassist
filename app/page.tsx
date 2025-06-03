@@ -24,6 +24,19 @@ import {
   Heart,
 } from "lucide-react"
 
+{ /* HomePage Logos */}
+
+import assignmentlogo from '@/components/images/logos/assignment.png'
+import studynotes from '@/components/images/logos/studynotes.png'
+import studymaterial from '@/components/images/logos/studymaterial.png'
+import synopsishelp from '@/components/images/logos/synopsishelp.png'
+import studygroups from '@/components/images/logos/studygroups.png'
+import gradecard from '@/components/images/logos/gradecard.png'
+import examupdate from '@/components/images/logos/examupdate.png'
+import careerguidence from '@/components/images/logos/careerguidance.png'
+import Image from "next/image"
+
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -51,80 +64,88 @@ export default function HomePage() {
             {[
               {
                 icon: FileText,
+                image:assignmentlogo,
                 title: "Premium Assignments",
                 description: "Expert-written assignments with guaranteed high scores",
                 color: "blue",
                 badge: "Most Popular",
-                image: "/placeholder.svg?height=200&width=300",
+                
               },
               {
                 icon: BookOpen,
+                image:studynotes,
                 title: "Study Notes",
                 description: "Comprehensive notes simplified for easy understanding",
                 color: "green",
                 badge: "Free Available",
-                image: "/placeholder.svg?height=200&width=300",
+                
               },
               {
                 icon: Search,
+                image:synopsishelp,
                 title: "Synopsis Help",
                 description: "Expert guidance for project work and dissertations",
                 color: "purple",
                 badge: "Expert Support",
-                image: "/placeholder.svg?height=200&width=300",
+               
               },
               {
                 icon: Download,
+                image:studymaterial,
                 title: "Study Materials",
                 description: "Books, papers, and resources for comprehensive preparation",
                 color: "orange",
                 badge: "Instant Access",
-                image: "/placeholder.svg?height=200&width=300",
+               
               },
               {
                 icon: Trophy,
+                image:gradecard,
                 title: "Grade Cards",
                 description: "Easy access to results and academic progress tracking",
                 color: "red",
                 badge: "Real-time",
-                image: "/placeholder.svg?height=200&width=300",
+               
               },
               {
                 icon: Calendar,
+                image:examupdate,
                 title: "Exam Updates",
                 description: "Latest exam schedules and important notifications",
                 color: "indigo",
                 badge: "Always Updated",
-                image: "/placeholder.svg?height=200&width=300",
+               
               },
               {
                 icon: Users,
+                image:studygroups,
                 title: "Study Groups",
                 description: "Connect with peers and join collaborative learning",
                 color: "teal",
                 badge: "Community",
-                image: "/placeholder.svg?height=200&width=300",
+               
               },
               {
                 icon: GraduationCap,
+                image:careerguidence,
                 title: "Career Guidance",
                 description: "Professional counseling for your future career path",
                 color: "pink",
                 badge: "Expert Advice",
-                image: "/placeholder.svg?height=200&width=300",
+               
               },
             ].map((service, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg overflow-hidden bg-gradient-to-br from-white to-gray-50"
+                className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg overflow-hidden bg-gradient-to-br from-white to-gray-50 "
               >
-                <div className="relative overflow-hidden">
-                  <img
+                <div className="relative  overflow-hidden ">
+                  <Image
                     src={service.image || "/placeholder.svg"}
                     alt={service.title}
-                    className="w-full h-24 lg:h-32 object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-[80%]  lg:h-32 object-cover group-hover:scale-110 transition-transform duration-500 mx-6"
                   />
-                  <div className="absolute top-1 right-1 lg:top-2 lg:right-2">
+                  <div className="absolute top-1 p-0 right-1 m-0 lg:top-2 lg:right-2">
                     <Badge
                       className={`text-xs lg:text-sm bg-${service.color}-100 text-${service.color}-700 border-${service.color}-200`}
                     >
@@ -274,7 +295,7 @@ export default function HomePage() {
               >
                 <CardHeader className="text-center p-8">
                   <div className="relative mb-6">
-                    <img
+                    <image
                       src={testimonial.image || "/placeholder.svg"}
                       alt={testimonial.name}
                       className="w-20 h-20 rounded-full mx-auto border-4 border-blue-100"

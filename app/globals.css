@@ -369,6 +369,9 @@ html {
     font-size: 2rem; /* 24px */
     line-height: 2rem; /* 32px */
   }
+  .mb-hidden{
+    display: none !important;
+  }
 }
 
 /* Sci-fi glitch effect */
